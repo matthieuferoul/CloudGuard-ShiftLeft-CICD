@@ -83,4 +83,3 @@ jobs:
       with:
         name: my-artifact
         path: terrascan.sarif
-    path: path/to/artifact/world.txt
