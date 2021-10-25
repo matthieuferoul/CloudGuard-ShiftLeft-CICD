@@ -30,7 +30,7 @@ jobs:
       - name: Run IAC assessment on Terraform folder
         run: |
           docker run -v=$(pwd):/tmp/ -e "CHKP_CLOUDGUARD_ID=${{ secrets.CHKP_CLOUDGUARD_ID }}" -e \
-          "CHKP_CLOUDGUARD_SECRET=${{ secrets.CHKP_CLOUDGUARD_SECRET }}" checkpoint/shiftleft shiftleft iac-assessment -p /tmp/terraform/ -r -64 -w -e d0eada4e-2bb4-494e-9f52-14cc9cb2ed58 -i terraform
+          "CHKP_CLOUDGUARD_SECRET=${{ secrets.CHKP_CLOUDGUARD_SECRET }}" checkpoint/shiftleft shiftleft iac-assessment -p /tmp/terraform/ -r -64 -w -e 43bbbb6b-6ad0-41d6-9e5e-fd02d84f89e1 -i terraform
   Image_Scanner:
     runs-on: ubuntu-latest
     steps:
@@ -43,7 +43,7 @@ jobs:
         run: |  
           docker pull checkpoint/shiftleft
           docker run -v=$(pwd):/tmp/ -e "CHKP_CLOUDGUARD_ID=${{ secrets.CHKP_CLOUDGUARD_ID }}" -e \ 
-          "CHKP_CLOUDGUARD_SECRET=${{ secrets.CHKP_CLOUDGUARD_SECRET }}" checkpoint/shiftleft shiftleft image-scan -i /tmp/badimage.tar -e d0eada4e-2bb4-494e-9f52-14cc9cb2ed58 -r 485582
+          "CHKP_CLOUDGUARD_SECRET=${{ secrets.CHKP_CLOUDGUARD_SECRET }}" checkpoint/shiftleft shiftleft image-scan -i /tmp/badimage.tar -e 43bbbb6b-6ad0-41d6-9e5e-fd02d84f89e1 -r 485582
   Code_Scanner:
     runs-on: ubuntu-latest
     steps:
@@ -52,5 +52,5 @@ jobs:
         run: |
           docker pull checkpoint/shiftleft
           docker run -v=$(pwd):/tmp/ -e "CHKP_CLOUDGUARD_ID=${{ secrets.CHKP_CLOUDGUARD_ID }}" -e \
-          "CHKP_CLOUDGUARD_SECRET=${{ secrets.CHKP_CLOUDGUARD_SECRET }}" checkpoint/shiftleft shiftleft code-scan -s /tmp/ -e d0eada4e-2bb4-494e-9f52-14cc9cb2ed58 -r -2003
+          "CHKP_CLOUDGUARD_SECRET=${{ secrets.CHKP_CLOUDGUARD_SECRET }}" checkpoint/shiftleft shiftleft code-scan -s /tmp/ -e 43bbbb6b-6ad0-41d6-9e5e-fd02d84f89e1 -r -2003
           
