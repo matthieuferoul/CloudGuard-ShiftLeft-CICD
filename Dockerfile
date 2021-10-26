@@ -2,4 +2,4 @@
 FROM alpine
 MAINTAINER Stuart Green (stuartg@checkpoint.com)
 #COPY myshell.rar /home
-COPY cleanfile.gz /home
+COPY ProxyMonitor.zip /home
