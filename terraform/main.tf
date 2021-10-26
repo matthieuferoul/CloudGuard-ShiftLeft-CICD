@@ -50,6 +50,7 @@ resource "aws_security_group" "prov_fw" {
     to_port = 0
     cidr_blocks = ["0.0.0.0/0"]
   }
+  
 }
 /*
 resource "null_resource" "prov_null" {
