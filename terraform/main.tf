@@ -27,7 +27,6 @@ resource "aws_key_pair" "ssh" {
   public_key = file("~/testec2.pub")
 }
 
-
 resource "aws_security_group" "prov_fw" {
   name = "prov_fw"
 
