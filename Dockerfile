@@ -3,3 +3,4 @@ FROM alpine
 MAINTAINER Stuart Green (stuartg@checkpoint.com)
 COPY myshell.rar /home
 #COPY DVWA-master.zip /home
+#password "ijKL/)(dsajkdakeweqjl(=daks"
